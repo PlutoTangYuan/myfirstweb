@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const postLinks = document.querySelectorAll('.post-card a');
-    
-    // 为每个文章链接绑定点击事件
-    postLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open('https://www.xiaohongshu.com', '_blank');  // 跳转到小红书官网
-        });
-    });
-
     // 监听滚动事件，改变背景渐变和字体大小
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
