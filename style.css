@@ -175,3 +175,52 @@ body {
     margin-top: 20px;
 }
 
+/* 新增样式开始 */
+/* 详情页头部 */
+.hero-article {
+    height: 60vh;
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7)) !important;
+}
+
+/* 返回按钮 */
+.btn-back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #00c6ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+/* 文章元信息 */
+.article-meta {
+    margin: 20px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* 正文区域 */
+.article-content {
+    padding: 50px 20px;
+    background: #1a1a1a;
+}
+
+.article-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* 图片样式 */
+.article-content img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+/* 新增样式结束 */
+
