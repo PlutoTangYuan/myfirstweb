@@ -1,0 +1,387 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌿 文艺风全局背景 */
+body {
+    font-family: 'Georgia', serif;  /* 改成更优雅的字体 */
+    background-color: #fdf6f0;  /* 柔和的米色背景 */
+    color: #5a5a5a;  /* 让文字颜色更柔和 */
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🌸 让文本更自然 */
+h1, h2, h3 {
+    font-weight: 500;
+    color: #403a3a;  /* 柔和深灰色 */
+}
+
+
+/* 🌿 主页头部区域（文艺风） */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #f8ede3, #fdf6f0);  /* 柔和渐变 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* 🌸 主页标题（变大+更优雅） */
+.hero h1 {
+    font-size: 4rem; /* 之前 3rem → 4rem */
+    font-family: 'Playfair Display', serif;  
+    color: #403a3a;
+}
+
+/* 🌸 副标题（变大） */
+.hero p {
+    font-size: 1.8rem; /* 之前 1.4rem → 1.8rem */
+    color: #706c61;
+    font-style: italic;
+}
+
+
+
+/* 🌸 按钮（文艺风，温柔色调） */
+.btn {
+    background-color: #d8a48f;  /* 柔和暖色调 */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    margin-top: 80px;
+    transform: translateY(100px); /* 让它从更低处滑入 */
+    visibility: hidden;
+    transition: opacity 1s ease-out, transform 1.5s ease-out, visibility 0s linear 0.5s;
+}
+
+.btn:hover {
+    background-color: #b07a6b;  /* 悬停时颜色更深一点 */
+    transform: scale(1.05);  /* 轻微放大 */
+}
+
+
+/* 文章列表样式 */
+.posts {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    background: #1f1f1f;
+}
+
+.post-card {
+    background: #222;  /* 深色卡片 */
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.95; /* 初始轻微透明度 */
+}
+
+.post-card:hover {
+    transform: translateY(-10px); /* 鼠标悬停时的提升效果 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.post-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #00c6ff;  /* 修改为亮蓝色，使字体更科技感 */
+}
+
+.post-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;  /* 淡灰色文字 */
+}
+
+.post-card a {
+    text-decoration: none;
+    color: #00c6ff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.post-card a:hover {
+    color: #006bb3;
+}
+
+/* 滚动时的效果 */
+.hero-scrolled {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); /* 滚动后变暗的渐变 */
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero, .post-card {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* 页脚样式 */
+.footer {
+    background: #111;  /* 与页面背景色相匹配，保持一致的暗色风格 */
+    color: #bbb;  /* 使用灰色字体，使内容不喧宾夺主 */
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.footer a {
+    color: #00c6ff;  /* 设置邮箱链接为蓝色 */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #006bb3;  /* 邮箱链接的悬停效果 */
+}
+
+.footer p:last-child {
+    font-size: 1rem;
+    color: #888;  /* 版权声明使用较淡的颜色 */
+    margin-top: 20px;
+}
+
+/* 新增样式开始 */
+/* 详情页头部 */
+.hero-article {
+    height: 60vh;
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7)) !important;
+}
+
+
+/* 文章元信息 */
+.article-meta {
+    margin: 20px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* 正文区域 */
+.article-content {
+    padding: 50px 20px;
+    background: #1a1a1a;
+}
+
+.article-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* 图片样式 */
+.article-content img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+/* 新增样式结束 */
+
+/* 右上角时间显示（文艺风格） */
+#current-time {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.3rem;  /* 字体稍微变大 */
+    color: #8b7765;  /* 柔和棕色 */
+    font-weight: 500;
+    font-family: 'Georgia', serif; /* 书卷气息 */
+    background: rgba(255, 245, 235, 0.6); /* 淡米色背景 */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px; /* 让时间框更大 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 页面滚动时时间微微透明 */
+.hero-scrolled #current-time {
+    opacity: 0.85;
+}
+
+
+/* 逐字显示标题 & 副标题 - 初始状态 */
+.hero-content span {
+    opacity: 0;
+    display: inline-block;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+/* 隐藏副标题，防止它在主标题动画之前显示 */
+.hero-content p {
+    visibility: hidden;
+}
+
+.hero-content.show .btn {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+.diary {
+    text-align: center;
+    padding: 50px;
+    background: #fffaf0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.diary h2 {
+    font-size: 2rem;
+    color: #ff6b81;
+}
+.diary-entries article {
+    text-align: left;
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid #ff6b81;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.diary-entries h3 {
+    font-size: 1.3rem;
+    color: #333;
+}
+.diary-entries p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+.diary-entries a {
+    text-decoration: none;
+    color: #ff6b81;
+    font-weight: bold;
+}
+.diary-entries a:hover {
+    text-decoration: underline;
+}
+
+.projects {
+    text-align: center;
+    padding: 50px;
+    background: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.projects h2 {
+    font-size: 2rem;
+    color: #0084ff;
+}
+.project-list article {
+    text-align: left;
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid #0084ff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.project-list h3 {
+    font-size: 1.3rem;
+    color: #333;
+}
+.project-list p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+.project-list a {
+    text-decoration: none;
+    color: #0084ff;
+    font-weight: bold;
+}
+.project-list a:hover {
+    text-decoration: underline;
+}
+
+.explore {
+    text-align: center;
+    padding: 50px;
+    background: #e6ffe6;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.explore h2 {
+    font-size: 2rem;
+    color: #28a745;
+}
+.explore-list article {
+    text-align: left;
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid #28a745;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.explore-list h3 {
+    font-size: 1.3rem;
+    color: #333;
+}
+.explore-list p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+.explore-list a {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: bold;
+}
+.explore-list a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
